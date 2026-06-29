@@ -1,0 +1,19 @@
+[project]
+name = "yoda0-scale"
+version = "0.1.0"
+description = "CLI tools for reading Yoda0 Bluetooth scale advertisements"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "bleak>=0.22",
+]
+
+[project.scripts]
+yoda0-scale = "yoda0_scale.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yoda0_scale"]
